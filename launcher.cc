@@ -122,7 +122,7 @@ int sched_enter_other(pid_t pid, int policy) {
 
 void spawn_threads(pid_t pid, int threads_numbers, int num_app){
 
-  ghost_test::PrioTableHelper prioTableHelper_(threads_numbers, threads_numbers);
+  ghost_test::PrioTableHelper prioTableHelper_(threads_numbers + 1, threads_numbers + 1);
 
   uint32_t num_items = 0;
   uint64_t gtid_app = (uint64_t) pid;
